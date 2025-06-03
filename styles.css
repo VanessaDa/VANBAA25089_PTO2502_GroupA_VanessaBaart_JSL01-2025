@@ -50,6 +50,7 @@ body {
 .sidebar__boards-heading {
   font-size: 12px;
   font-weight: 700;
+  letter-spacing:2.4px ;
   margin-bottom: 1rem;
   color: #828FA3;
   margin-left: 32px;
@@ -61,6 +62,7 @@ body {
   width: 100%;
   text-align: center;
   font-weight: 700;
+  line-height: 20px;
   border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
 }
@@ -83,6 +85,12 @@ body {
   padding: 1rem 2rem;
   border-bottom: 1px solid #ccc;
   background-color: #fff;
+}
+
+.board__title--desktop {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.5;
 }
 
 .board__columns {
@@ -155,7 +163,9 @@ body {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  font-weight: 500;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 20px;
 }
 .board__title--mobile {
   display: none;
@@ -169,10 +179,10 @@ body {
 }
 
 .board__mobile-text {
-  font-size: 1.25rem;
+  font-size: 20px;
   font-weight: 700;
 }
-/* Responsive */
+/* Responsive layout */
 @media (max-width: 768px) {
   .sidebar {
     display: none;
