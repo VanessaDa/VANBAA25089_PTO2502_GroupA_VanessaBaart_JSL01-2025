@@ -142,3 +142,33 @@ body {
   color: #828FA3;
   text-transform: uppercase;
 }
+
+/* Task Cards */
+.column__task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-card {
+  background-color: var(--card-bg);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-weight: 500;
+}
+.board__title--mobile {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.board__mobile-logo {
+  width: 24px;
+  height: 24px;
+}
+
+.board__mobile-text {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
