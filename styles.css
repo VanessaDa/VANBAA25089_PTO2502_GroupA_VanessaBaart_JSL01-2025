@@ -172,3 +172,29 @@ body {
   font-size: 1.25rem;
   font-weight: 700;
 }
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .board__columns {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .column {
+    min-width: 100%;
+  }
+
+.board__title--desktop {
+    display: none;
+  }
+
+  .board__title--mobile {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+}
