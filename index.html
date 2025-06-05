@@ -8,74 +8,87 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css" />   
   </head>
-    <body>
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar__top">
-        <div class="sidebar__logo-section">
-          <img src="assets/favicon.svg" alt="Kanban Board Logo" class="sidebar__logo" />
-          <h1 class="sidebar__title">Kanban</h1>
-        </div>
+   <body>
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar__top">
+      
+      <!-- Logo Section -->
+      <div class="sidebar__logo-section" id="sidebarLogo">
+        <img src="assets/favicon.svg" alt="Kanban Board Logo" class="sidebar__logo" />
+        <h1 class="sidebar__title">Kanban</h1>
+      </div>
 
-        <div class="sidebar__boards">
-          <h4 class="sidebar__boards-heading">ALL BOARDS (1)</h4>
-          <button class="sidebar__board-button sidebar__board-button--active">Launch Career</button>
+      <!-- Board List -->
+      <div class="sidebar__boards" id="boardList">
+        <h4 class="sidebar__boards-heading">ALL BOARDS (1)</h4>
+        <button class="sidebar__board-button sidebar__board-button--active" id="boardLaunchCareer">
+          Launch Career
+        </button>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Main Kanban Board -->
+  <div class="board" id="kanbanBoard">
+
+    <!-- Header -->
+    <header class="board__header" id="boardHeader">
+      <div class="board__title-wrapper">
+        <h2 class="board__title board__title--desktop" id="boardTitleDesktop">Launch Career</h2>
+
+        <div class="board__title--mobile" id="boardTitleMobile">
+          <img src="assets/favicon.svg" alt="Kanban Logo" class="board__mobile-logo" />
+          <h2 class="board__mobile-text">Kanban</h2>
         </div>
       </div>
-    </aside>
+    </header>
 
-      <!-- Main Content -->
-    <div class="board">
-      <header class="board__header">
-  <div class="board__title-wrapper">
-    <h2 class="board__title board__title--desktop">Launch Career</h2>
-    <div class="board__title--mobile">
-      <img src="assets/favicon.svg" alt="Kanban Logo" class="board__mobile-logo" />
-      <h2 class="board__mobile-text">Kanban</h2>
-    </div>
+    <!-- Columns Container -->
+    <main class="board__columns" id="columns">
+
+      <!-- Column: To Do -->
+      <section class="column" id="columnTodo">
+        <div class="column__header">
+          <span class="column__status-dot column__status-dot--todo"></span>
+          <h4 class="column__title">To Do <span class="column__count" id="countTodo">(4)</span></h4>
+        </div>
+        <div class="column__task-list" id="taskListTodo">
+          <div class="task-card">Launch Epic Career 🚀</div>
+          <div class="task-card">Conquer React 🧠</div>
+          <div class="task-card">Understand Databases ⚙️</div>
+          <div class="task-card">Crush Frameworks 🟩</div>
+        </div>
+      </section>
+
+      <!-- Column: In Progress -->
+      <section class="column" id="columnDoing">
+        <div class="column__header">
+          <span class="column__status-dot column__status-dot--doing"></span>
+          <h4 class="column__title">In Progress <span class="column__count" id="countDoing">(2)</span></h4>
+        </div>
+        <div class="column__task-list" id="taskListDoing">
+          <div class="task-card">Master JavaScript 💛</div>
+          <div class="task-card">Never Give Up 🏆</div>
+        </div>
+      </section>
+
+      <!-- Column: Done -->
+      <section class="column" id="columnDone">
+        <div class="column__header">
+          <span class="column__status-dot column__status-dot--done"></span>
+          <h4 class="column__title">Done <span class="column__count" id="countDone">(2)</span></h4>
+        </div>
+        <div class="column__task-list" id="taskListDone">
+          <div class="task-card">Explore ES6 Features 🚀</div>
+          <div class="task-card">Have fun 🤩</div>
+        </div>
+      </section>
+
+    </main>
   </div>
-</header>
-  
-  <main class="board__columns">
-        <!-- To Do -->
-        <section class="column">
-          <div class="column__header">
-            <span class="column__status-dot column__status-dot--todo"></span>
-            <h4 class="column__title">ToDo <span class="column__count">(4)</span></h4>
-          </div>
-          <div class="column__task-list">
-            <div class="task-card">Launch Epic Career 🚀</div>
-            <div class="task-card">Conquer React 🧠</div>
-            <div class="task-card">Understand Databases ⚙️</div>
-            <div class="task-card">Crush Frameworks 🟩</div>
-          </div>
-        </section>
+</body>
 
-             <!-- In Progress -->
-        <section class="column">
-          <div class="column__header">
-            <span class="column__status-dot column__status-dot--doing"></span>
-            <h4 class="column__title">In Progress <span class="column__count">(2)</span></h4>
-          </div>
-          <div class="column__task-list">
-            <div class="task-card">Master JavaScript 💛</div>
-            <div class="task-card">Never Give Up 🏆</div>
-          </div>
-        </section>
-
-          <!-- Done -->
-        <section class="column">
-          <div class="column__header">
-            <span class="column__status-dot column__status-dot--done"></span>
-            <h4 class="column__title">Done <span class="column__count">(2)</span></h4>
-          </div>
-          <div class="column__task-list">
-            <div class="task-card">Explore ES6 Features 🚀</div>
-            <div class="task-card">Have fun 🤩</div>
-          </div>
-        </section>
-      </main>
-    </div>
-  </body>
 </html>
 
