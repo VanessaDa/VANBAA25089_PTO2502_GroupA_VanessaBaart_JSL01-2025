@@ -1,3 +1,7 @@
+
+/* 
+  Root CSS variables for consistent theming and easy color management 
+*/
 :root {
   --bg: #f4f7fd;
   --card-bg: #ffffff;
@@ -7,7 +11,7 @@
   --doing-color: #8471f2;
   --done-color: #67e2ae;
 }
-
+/* Global CSS Reset */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -19,7 +23,14 @@ body {
   background-color: var(--bg);
   color: var(--text);
   display: flex;
-  min-height: 100vh;
+  min-height: 100vh; /*Ensures the app takes at least the full viewport height */
+}
+.app {
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the app horizontally */
+  padding: 1rem;
 }
 /* Sidebar */
 .sidebar {
@@ -31,8 +42,8 @@ body {
 
 .sidebar__top {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  flex-direction: column; 
+  gap: 2rem; 
 }
 
 .sidebar__logo-section {
@@ -50,11 +61,12 @@ body {
 .sidebar__boards-heading {
   font-size: 12px;
   font-weight: 700;
-  letter-spacing:2.4px ;
+  letter-spacing:2.4px;
   margin-bottom: 1rem;
   color: #828FA3;
   margin-left: 32px;
 }
+
 .sidebar__board-button {
   background: none;
   border: none;
@@ -162,7 +174,7 @@ body {
   background-color: var(--card-bg);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
   font-weight: 700;
   font-size: 15px;
   line-height: 20px;
@@ -182,10 +194,10 @@ body {
   font-size: 20px;
   font-weight: 700;
 }
-/* Responsive layout */
+/* Mobile Responsive layout */
 @media (max-width: 768px) {
   .sidebar {
-    display: none;
+    display: none; /* Hide sidebar on mobile */
   }
 
   .board__columns {
@@ -198,7 +210,7 @@ body {
   }
 
 .board__title--desktop {
-    display: none;
+    display: none; /* Hide desktop title on mobile */
   }
 
   .board__title--mobile {
